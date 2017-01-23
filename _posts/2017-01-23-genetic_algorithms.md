@@ -234,14 +234,14 @@ Another example is to [approximate Mona Lisa](https://www.youtube.com/watch?v=rG
 
 However, this difficulty can be partially overcomed by increasing the population size. A similar problem is tackled in the [Evolving Darwin](https://www.youtube.com/watch?v=dO05XcXLxGs) example, where a picture of Darwin is approximated with 1000 ellipses instead of 150 circles. The final product is almost identical to the original picture. However, the evolution took approximately the same number of generations as the Mona Lisa problem, and each step probably took longer in comparison due to larger population size. Thus, increasing the population makes the the approximation more accurate, but more time consuming.
 
-Some of other fun examples that employed genetic algorithms as well as neural network are listed below: 
+Coming from a life science background, I really find this algorithm brilliant and intriguing. I hope you have enjoyed this as much as I did. Some of other fun examples that employed genetic algorithms as well as neural network are listed below: 
 
 - [another cool image reproducing example](https://www.youtube.com/watch?v=iV-hah6xs2A) 
 - [training 2D robot fighters](https://www.youtube.com/watch?v=u2t77mQmJiY) 
 - [funny ladders learning to stand](https://www.youtube.com/watch?v=lPQnVEnFTgY) 
 - [evolving kangaroos](https://www.youtube.com/watch?v=m4E9sj9vH1I)
 
-References:
+### References:
 
 Oliveto, Pietro S., Jun He, and Xin Yao. "Time complexity of evolutionary algorithms for combinatorial optimization: A decade of results." International Journal of Automation and Computing 4.3 (2007): 281-293.
 

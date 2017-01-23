@@ -1,3 +1,11 @@
+---
+layout: post
+title: "Genetic Algorithms"
+date: 2017-01-23
+categories:
+  - Data Science
+---
+
 Natural Selection in Machine Learning
 ================
 

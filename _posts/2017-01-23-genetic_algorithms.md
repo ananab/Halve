@@ -143,7 +143,7 @@ persp3D(x, y, f, theta = 50, phi = 20, color.palette = bl2gr.colors)
 
 ![](/images/fig5.png)
 
-The problem has a couple local minima and one global minima in the domain of interest. To view this more clearly:
+The problem has a couple local minima and one global minimum in the domain of interest. To view this more clearly:
 
 ``` r
 filled.contour(x, y, f, color.palette = bl2gr.colors)

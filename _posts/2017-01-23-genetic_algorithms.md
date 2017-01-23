@@ -61,7 +61,7 @@ f <- function(x) abs(x)*cos(x+1)
 curve(expr = f,from = lb,to = ub,n=1000)
 ```
 
-![](genetic_algorithms_files/figure-markdown_github/unnamed-chunk-2-1.png)
+![](/image/fig1.png)
 
 To do this, we randomly sample a population within the domain of the problem \((-3,3)\). The solutions have only one feature, x, which can be mutated and crossed over in each generation. The `ga` function in this package uses a population of 50 individuals for 100 generations, and has 2 elite solutions which keeps the current best fitness scores. The evolution process is summarized and plotted below:
 
@@ -98,7 +98,7 @@ summary(GA)
 plot(GA)
 ```
 
-![](genetic_algorithms_files/figure-markdown_github/unnamed-chunk-3-1.png)
+![](/image/fig2.png)
 
 The optimized solution (maximum) found is:
 
@@ -107,7 +107,7 @@ curve(f, lb, ub, n = 1000)
 points(GA@solution, GA@fitnessValue, col = 'red')
 ```
 
-![](genetic_algorithms_files/figure-markdown_github/unnamed-chunk-4-1.png)
+![](/image/fig3.png)
 
 To find the minimum value, add a `-` sign in front of the fitness function as such:
 
@@ -119,7 +119,7 @@ curve(f, lb, ub, n = 1000)
 points(GA@solution, -GA@fitnessValue, col = 'blue', pch = 100)
 ```
 
-![](genetic_algorithms_files/figure-markdown_github/unnamed-chunk-5-1.png)
+![](/image/fig4.png)
 
 Moving on to a 2D space search. The problem is a replication of the [MathWorks](https://www.mathworks.com/videos/what-is-a-genetic-algorithm-100904.html)' genetic algorithm demonstration in R:
 
@@ -133,7 +133,7 @@ f <- outer(x, y, g)
 persp3D(x, y, f, theta = 50, phi = 20, color.palette = bl2gr.colors)
 ```
 
-![](genetic_algorithms_files/figure-markdown_github/unnamed-chunk-6-1.png)
+![](/image/fig5.png)
 
 The problem has a couple local minima and one global minima in the domain of interest. To view this more clearly:
 
@@ -141,7 +141,7 @@ The problem has a couple local minima and one global minima in the domain of int
 filled.contour(x, y, f, color.palette = bl2gr.colors)
 ```
 
-![](genetic_algorithms_files/figure-markdown_github/unnamed-chunk-7-1.png)
+![](/image/fig6.png)
 
 The genetic algorithm can be applied by starting with randomly selected points, and mutate around points with promising fitness values. The code is very similar to the previous example for minimization:
 
@@ -157,7 +157,7 @@ filled.contour(x, y, f, color.palette = bl2gr.colors,
 )
 ```
 
-![](genetic_algorithms_files/figure-markdown_github/unnamed-chunk-8-1.png)
+![](/image/fig7.png)
 
 The evolution process is summarized and plotted:
 
@@ -192,7 +192,7 @@ summary(GA)
 plot(GA)
 ```
 
-![](genetic_algorithms_files/figure-markdown_github/unnamed-chunk-9-1.png)
+![](/image/fig8.png)
 
 I will do one more boring demonstration before sharing something much more fun. It is well known that Darwin developed his theory of evolution partially by observing his famous [finches](http://www.rpgroup.caltech.edu/courses/Evolution_GIST_2013/files_2013/articles/FinchesSulloway.pdf) on different islands. The GA package borrowed this idea of isolated evolution to further avoid prematured convergence. The population is devided into a number of subpopulations as defined to live on their own "islands". Except for rare occasions, the genetic materials are only exchanged within each group and not between different islands. The same problem is examined using this approach on a larger domain:
 
@@ -212,7 +212,7 @@ GA <- gaisl(type = "real-valued",
 plot(GA, log = "x")
 ```
 
-![](genetic_algorithms_files/figure-markdown_github/unnamed-chunk-10-1.png)
+![](/image/fig9.png)
 
 It is seen that the evolutionary paths for the two subpopulations are quite similar to each other. This is due to the simplicity of the problem. For practical, complex problems, the plots will be more diverged. Another advantage of the island evolution approach is that the calculation is done in parallel by default. In the GA package, parallelism can be easily applied to boost the algorithm's performance in terms of time complexity.
 
@@ -229,6 +229,16 @@ However, this difficulty can be partially overcomed by increasing the population
 Some of other fun examples that employed genetic algorithms as well as neural network are listed below: - [another cool image reproducing example](https://www.youtube.com/watch?v=iV-hah6xs2A) - [training 2D robot fighters](https://www.youtube.com/watch?v=u2t77mQmJiY) - [funny ladders learning to stand](https://www.youtube.com/watch?v=lPQnVEnFTgY) - [evolving kangaroos](https://www.youtube.com/watch?v=m4E9sj9vH1I)
 
 References:
+
+Oliveto, Pietro S., Jun He, and Xin Yao. "Time complexity of evolutionary algorithms for combinatorial optimization: A decade of results." International Journal of Automation and Computing 4.3 (2007): 281-293.
+
+Y. Rabinovich, A. Wigderson. Techniques for bounding the convergence rate of genetic algorithms. Random Structures Algorithms, vol. 14, no. 2, 111-138, 1999.
+
+Ashlock, D. (2006), Evolutionary Computation for Modeling and Optimization, Springer, ISBN 0-387-22196-4.
+
+Wikipedia contributors. "Metaheuristic." Wikipedia, The Free Encyclopedia. Wikipedia, The Free Encyclopedia, 27 Dec. 2016. Web. 23 Jan. 2017.
+
+Wikipedia contributors. "Genetic algorithm." Wikipedia, The Free Encyclopedia. Wikipedia, The Free Encyclopedia, 5 Jan. 2017. Web. 23 Jan. 2017.
 
 Luca Scrucca (2013). GA: A Package for Genetic Algorithms in R. Journal of Statistical Software, 53(4), 1-37. URL <http://www.jstatsoft.org/v53/i04/>.
 

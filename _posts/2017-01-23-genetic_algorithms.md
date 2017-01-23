@@ -61,7 +61,7 @@ f <- function(x) abs(x)*cos(x+1)
 curve(expr = f,from = lb,to = ub,n=1000)
 ```
 
-![](/image/fig1.png)
+![](/images/fig1.png)
 
 To do this, we randomly sample a population within the domain of the problem \((-3,3)\). The solutions have only one feature, x, which can be mutated and crossed over in each generation. The `ga` function in this package uses a population of 50 individuals for 100 generations, and has 2 elite solutions which keeps the current best fitness scores. The evolution process is summarized and plotted below:
 
@@ -98,7 +98,7 @@ summary(GA)
 plot(GA)
 ```
 
-![](/image/fig2.png)
+![](/images/fig2.png)
 
 The optimized solution (maximum) found is:
 
@@ -107,7 +107,7 @@ curve(f, lb, ub, n = 1000)
 points(GA@solution, GA@fitnessValue, col = 'red')
 ```
 
-![](/image/fig3.png)
+![](/images/fig3.png)
 
 To find the minimum value, add a `-` sign in front of the fitness function as such:
 
@@ -119,7 +119,7 @@ curve(f, lb, ub, n = 1000)
 points(GA@solution, -GA@fitnessValue, col = 'blue', pch = 100)
 ```
 
-![](/image/fig4.png)
+![](/images/fig4.png)
 
 Moving on to a 2D space search. The problem is a replication of the [MathWorks](https://www.mathworks.com/videos/what-is-a-genetic-algorithm-100904.html)' genetic algorithm demonstration in R:
 
@@ -133,7 +133,7 @@ f <- outer(x, y, g)
 persp3D(x, y, f, theta = 50, phi = 20, color.palette = bl2gr.colors)
 ```
 
-![](/image/fig5.png)
+![](/images/fig5.png)
 
 The problem has a couple local minima and one global minima in the domain of interest. To view this more clearly:
 
@@ -141,7 +141,7 @@ The problem has a couple local minima and one global minima in the domain of int
 filled.contour(x, y, f, color.palette = bl2gr.colors)
 ```
 
-![](/image/fig6.png)
+![](/images/fig6.png)
 
 The genetic algorithm can be applied by starting with randomly selected points, and mutate around points with promising fitness values. The code is very similar to the previous example for minimization:
 
@@ -157,7 +157,7 @@ filled.contour(x, y, f, color.palette = bl2gr.colors,
 )
 ```
 
-![](/image/fig7.png)
+![](/images/fig7.png)
 
 The evolution process is summarized and plotted:
 
@@ -192,7 +192,7 @@ summary(GA)
 plot(GA)
 ```
 
-![](/image/fig8.png)
+![](/images/fig8.png)
 
 I will do one more boring demonstration before sharing something much more fun. It is well known that Darwin developed his theory of evolution partially by observing his famous [finches](http://www.rpgroup.caltech.edu/courses/Evolution_GIST_2013/files_2013/articles/FinchesSulloway.pdf) on different islands. The GA package borrowed this idea of isolated evolution to further avoid prematured convergence. The population is devided into a number of subpopulations as defined to live on their own "islands". Except for rare occasions, the genetic materials are only exchanged within each group and not between different islands. The same problem is examined using this approach on a larger domain:
 
@@ -212,7 +212,7 @@ GA <- gaisl(type = "real-valued",
 plot(GA, log = "x")
 ```
 
-![](/image/fig9.png)
+![](/images/fig9.png)
 
 It is seen that the evolutionary paths for the two subpopulations are quite similar to each other. This is due to the simplicity of the problem. For practical, complex problems, the plots will be more diverged. Another advantage of the island evolution approach is that the calculation is done in parallel by default. In the GA package, parallelism can be easily applied to boost the algorithm's performance in terms of time complexity.
 

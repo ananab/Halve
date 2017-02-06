@@ -3,6 +3,9 @@ The Influence of Army Size on The Employment Levels: in Post-WWII and Post-Korea
 Kai He
 Feb 3rd, 2017
 
+
+This post is created as my first practice of report writing for a non-technical audience. The context is to answer some questions for a group of political scientists with a minimum usage of statistical terminologies. Specifically, the analysis is trying to answer macroeconomics questions regarding the influence of army size on employment in the post-ww2 USA. The dataset used is the `langley` package from the `faraway` package in R.
+
 ### Introduction
 
 The main task of this analysis is to have a better understanding of Macroeconomics in the United States post-World War II. Specifically, the employment levels may be influenced by the Gross National Product (GNP), unemployment, and size of the army. The relative significance of these effects is examined by conducting statistical modeling on data collected annually between years 1947 and 1962. Through hypothesis testing, the question that whether the number of people in the military has an impact on employment rate is answered.
@@ -106,9 +109,10 @@ The dataset of macroeconomics in the post-WWII USA is explored with visualizatio
 
 ### References
 
-<http://www.history.army.mil/html/books/045/45-3-1/cmhPub_45-3-1.pdf> 1. Donald A. Carter (2014). Forging the Shield The U.S. Army in Europe, 1951–1962.
+1. Donald A. Carter (2014). Forging the Shield The U.S. Army in Europe, 1951–1962.
+<http://www.history.army.mil/html/books/045/45-3-1/cmhPub_45-3-1.pdf> 
 
-1.  Julian Faraway (2016). faraway: Functions and Datasets for Books by Julian Faraway. R package version 1.0.7. <https://CRAN.R-project.org/package=faraway>
+2.  Julian Faraway (2016). faraway: Functions and Datasets for Books by Julian Faraway. R package version 1.0.7. <https://CRAN.R-project.org/package=faraway>
 
 ### Appendix
 

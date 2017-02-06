@@ -1,10 +1,8 @@
 ---
 layout: home
 ---
-# About Theme
+# About Kai
 
-This theme is Jekyll port of [vangeltzo.com](http://vangeltzo.com/) (by [Vangelis Tzortzis](https://github.com/srekoble)).
+Kai is currently in the first cohort of MDS program at UBC. With a background in Biochemistry and work experiences in Bioinformatics, Kai is very interested in the interpretation of scientific data and applications of machine learning algorithms. He also enjoys to cook and eat.
 
-To learn how to install and use this theme check out the [installation guide](http://taylantatli.me/Halve/halve-theme/) for more information.
-
-If you have a question, find a bug, or just want to say hi, please open an [issue on GitHub](https://github.com/TaylanTatli/Halve/issues/new).
+This blog is to check his understanding and keep a record of things he learnt.

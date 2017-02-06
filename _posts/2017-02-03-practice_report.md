@@ -42,7 +42,7 @@ The entire dataset is shown in Table 1
 
 As the introduction stated, the main goal of this analysis is to examine the relationships between 4 of the 7 factors. Namely Employed, Unemployed, GNP, and Armed.Forces. An overview of the factors is shown in Fig. 1
 
-![](polisci_report_files/figure-markdown_github/unnamed-chunk-3-1.png)
+![](../images/unnamed-chunk-3-1.png)
 
 There is a lot of plotting going on in this figure and the first glance can be very messy. However, since the interest is to understand how employment levels are affected by the other factors, the main focus should be the bottom row only. In this row, the first three panels show relationships between Employment and each of the other factors in scatter plots, where a clear pattern would suggest a stronger relationship. The last panel shows the distribution of all employment values as a density plot. It should be noticed that the distribution of employment is not correspondent to the years.
 
@@ -52,7 +52,7 @@ From these plots, it is obvious that employment has a strong relationship with G
 
 Nonetheless, the important question we are trying to answer is that if the size of Armed Forces has an influence on employment. If we just look at the correlation, it may seem that the relationship between the two is not very strong (0.457). However, the scatter plot shows a rather strange pattern. As it is seen in the third panel in the last row, there are four data points with low employment and small size of the military, while the majority of the employment levels seem to decrease as the Armed Forces get bigger. Moreover, a similar pattern is observed for the relationship between Armed Forces and GNP, which is expected because employment and GNP are highly correlated. This observation is further examined by looking into the size of the military over year in Figure 2, and employment over year in Figure 3.
 
-![](polisci_report_files/figure-markdown_github/unnamed-chunk-4-1.png)![](polisci_report_files/figure-markdown_github/unnamed-chunk-4-2.png)
+![](../images/unnamed-chunk-4-1.png)![](../images/unnamed-chunk-4-2.png)
 
 As it is seen in these figures, the employment is steadily increasing over the years. However, the size of Armed Forces boosted suddenly in the year 1951 by nearly 150 millions people, and then gradually decreased again until the 60s. The first jump at 1951 marks the beginning of the Korean War, and the second increase in 1961 is due to the Berlin Crisis (1). From Figure 2, we can conclude that the 4 data points with small numbers of people in the army correspond to the period before the Korean War in 1950. Because of the drastic changes in international relations and the impact US foreign policies have on its economics, it is also reasonable to divide the dataset into two portions by 1951, and focus on the post-war period (1951 - 1962). The split datasets are shown in the tables 6 and 7.
 
@@ -64,21 +64,21 @@ Similarly, another hypothesis test is completed using split dataset after the Ko
 
 ### Results
 
-![](polisci_report_files/figure-markdown_github/unnamed-chunk-6-1.png)
+![](../images/unnamed-chunk-6-1.png)
 
 | term         |    estimate|  std.error|  statistic|    p.value|
 |:-------------|-----------:|----------:|----------:|----------:|
 | (Intercept)  |  59.3012647|  3.2293472|  18.363236|  0.0000000|
 | Armed.Forces |   0.0230781|  0.0119944|   1.924065|  0.0749178|
 
-![](polisci_report_files/figure-markdown_github/unnamed-chunk-7-1.png)
+![](../images/unnamed-chunk-7-1.png)
 
 | term         |    estimate|  std.error|  statistic|    p.value|
 |:-------------|-----------:|----------:|----------:|----------:|
 | (Intercept)  |  82.5703510|  3.7254926|   22.16361|  0.0000000|
 | Armed.Forces |  -0.0532774|  0.0125349|   -4.25031|  0.0016887|
 
-![](polisci_report_files/figure-markdown_github/unnamed-chunk-8-1.png)![](polisci_report_files/figure-markdown_github/unnamed-chunk-8-2.png)
+![](../images/unnamed-chunk-8-1.png)![](../images/unnamed-chunk-8-2.png)
 
 | term        |    estimate|  std.error|  statistic|  p.value|
 |:------------|-----------:|----------:|----------:|--------:|
